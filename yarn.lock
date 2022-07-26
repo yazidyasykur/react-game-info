@@ -2271,11 +2271,14 @@
     "normalize-path" "^3.0.0"
     "picomatch" "^2.0.4"
 
+<<<<<<< HEAD
 "app-root-path@2.1.0":
   "integrity" "sha512-z5BqVjscbjmJBybKlICogJR2jCr2q/Ixu7Pvui5D4y97i7FLsJlvEG9XOR/KJRlkxxZz7UaaS2TMwQh1dRJ2dA=="
   "resolved" "https://registry.npmjs.org/app-root-path/-/app-root-path-2.1.0.tgz"
   "version" "2.1.0"
 
+=======
+>>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
 "arg@^5.0.2":
   "integrity" "sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg=="
   "resolved" "https://registry.npmjs.org/arg/-/arg-5.0.2.tgz"
@@ -3760,9 +3763,15 @@
     "jake" "^10.6.1"
 
 "electron-to-chromium@^1.4.188":
+<<<<<<< HEAD
   "integrity" "sha512-WIGME0Cs7oob3mxsJwHbeWkH0tYkIE/sjkJ8ML2BYmuRcjhRl/q5kVDXG7W9LOOKwzPU5M0LBlXRq9rlSgnNlg=="
   "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.199.tgz"
   "version" "1.4.199"
+=======
+  "integrity" "sha512-nPyI7oHc8T64oSqRXrAt99gNMpk0SAgPHw/o+hkNKyb5+bcdnFtZcSO9FUJES5cVkVZvo8u4qiZ1gQILl8UXsA=="
+  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.200.tgz"
+  "version" "1.4.200"
+>>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
 
 "emittery@^0.8.1":
   "integrity" "sha512-uDfvUjVrfGJJhymx/kz6prltenw1u7WrCg1oa94zYY8xxVpLLUu045LAT0dhDZdXG58/EpPL/5kA180fQ/qudg=="
@@ -4504,11 +4513,14 @@
     "combined-stream" "^1.0.8"
     "mime-types" "^2.1.12"
 
+<<<<<<< HEAD
 "formats@1.0.0":
   "integrity" "sha512-For0Y8egwEK96JgJo4NONErPhtl7H2QzeB2NYGmzeGeJ8a1JZqPgLYOtM3oJRCYhmgsdDFd6KGRYyfe37XY4Yg=="
   "resolved" "https://registry.npmjs.org/formats/-/formats-1.0.0.tgz"
   "version" "1.0.0"
 
+=======
+>>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
 "forwarded@0.2.0":
   "integrity" "sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow=="
   "resolved" "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz"
@@ -5937,6 +5949,7 @@
   "integrity" "sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg=="
   "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.6.tgz"
   "version" "2.0.6"
+<<<<<<< HEAD
 
 "limes@2.0.0":
   "integrity" "sha512-evWD0pnTgPX7QueaSoJl5JBUL30T1ZVzo34ke97tIKmeagqhBTYK/JkKL0vtG3MpNApw8ZY9TlbybfwEz9knBA=="
@@ -5945,6 +5958,8 @@
   dependencies:
     "@babel/runtime" "7.3.4"
     "jsonwebtoken" "8.5.0"
+=======
+>>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
 
 "lines-and-columns@^1.1.6":
   "integrity" "sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg=="
@@ -6342,6 +6357,7 @@
   "integrity" "sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg=="
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-2.0.6.tgz"
   "version" "2.0.6"
+<<<<<<< HEAD
 
 "node-rsa@0.4.2":
   "integrity" "sha512-Bvso6Zi9LY4otIZefYrscsUpo2mUpiAVIEmSZV2q41sP8tHZoert3Yu6zv4f/RXJqMNZQKCtnhDugIuCma23YA=="
@@ -6354,6 +6370,8 @@
   "integrity" "sha512-QDf6R8VXF56QVe1boek8an/Rb3rSNaxoFWb7Elpsv2m1+Noua1yy0F1FpKpK5VluF8oymWM4w764A4KsYL4pDg=="
   "resolved" "https://registry.npmjs.org/node-statsd/-/node-statsd-0.1.1.tgz"
   "version" "0.1.1"
+=======
+>>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
 
 "normalize-path@^3.0.0", "normalize-path@~3.0.0":
   "integrity" "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
@@ -8478,6 +8496,7 @@
   "resolved" "https://registry.npmjs.org/symbol-tree/-/symbol-tree-3.2.4.tgz"
   "version" "3.2.4"
 
+<<<<<<< HEAD
 "tailwind@^4.0.0":
   "integrity" "sha512-LlUNoD/5maFG1h5kQ6/hXfFPdcnYw+1Z7z+kUD/W/E71CUMwcnrskxiBM8c3G8wmPsD1VvCuqGYMHviI8+yrmg=="
   "resolved" "https://registry.npmjs.org/tailwind/-/tailwind-4.0.0.tgz"
@@ -8516,6 +8535,13 @@
   "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.1.6.tgz"
   "version" "3.1.6"
   dependencies:
+=======
+"tailwindcss@^3.0.2", "tailwindcss@^3.1.6":
+  "integrity" "sha512-7skAOY56erZAFQssT1xkpk+kWt2NrO45kORlxFPXUt3CiGsVPhH1smuH5XoDH6sGPXLyBv+zgCKA2HWBsgCytg=="
+  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.1.6.tgz"
+  "version" "3.1.6"
+  dependencies:
+>>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
     "arg" "^5.0.2"
     "chokidar" "^3.5.3"
     "color-name" "^1.1.4"
