@@ -4,6 +4,7 @@ import Navbar from "./component/Navbar";
 import SearchAndDiscover from "./component/SearchAndDiscover";
 import getData from "./services/GetData";
 import AcquireData from "./component/Button";
+import Footer from "./component/Footer"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <SearchAndDiscover />
       {/* <NavbarSM /> */}
       {/* <AcquireData /> */}
+      <Footer />
     </div>
   );
 };
