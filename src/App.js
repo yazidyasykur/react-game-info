@@ -1,23 +1,17 @@
-<<<<<<< HEAD
 import logo from "./logo.svg";
-import "./App.css";
+
 import Navbar from "./component/Navbar";
-import NavbarSM from "./component/SideBarDropDown";
-=======
-import './App.css';
-import AcquireData from './component/Button';
->>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
+import SearchAndDiscover from "./component/SearchAndDiscover";
+import getData from "./services/GetData";
+import AcquireData from "./component/Button";
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      <NavbarSM />
+    <div className="">
       <Navbar />
-=======
-    <div className="App">
-      <AcquireData />
->>>>>>> af92137589ecfda7744e22692b1e9bfbdc69f656
+      <SearchAndDiscover />
+      {/* <NavbarSM /> */}
+      {/* <AcquireData /> */}
     </div>
   );
 };

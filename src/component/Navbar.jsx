@@ -1,49 +1,29 @@
 import Logo from "../asets/Epic.png";
 import { MenuIcon, XIcon, UserIcon } from "@heroicons/react/solid";
 import { useState } from "react";
+// import NavbarSM from "./SideBarDropDown";
 
 const NavbarSM = () => {
   return (
-    <div className="flex absolute justify-end w-full h-full overflow-x-auto  ">
+    <div className="flex absolute justify-end w-screen min-w-[360px] h-screen md:hidden mt-16 top-0 border-t-[1px] overflow-y-hidden">
       {/* Menu when display below 720px */}
-      <div className="side-bar-dropdown bg-[#2a2a2a] min-w-[320px] p-2">
+      <div className=" flex flex-col side-bar-dropdown bg-[#2a2a2a] justify-between min-w-[320px] p-2">
         <div>
-          <ul className="flex flex-col text-[#ccc] gap-4 min-w-[320px] ">
-            <li className="border-b-[1px]">Home</li>
-            <li className="border-b-[1px]">Faq</li>
-            <li className="border-b-[1px]">Help</li>
-            <li className="border-b-[1px]">About us</li>
-            <li className="border-b-[1px]">About us</li>
+          <ul className="flex flex-col text-[#E7E7E7] gap-4 ">
+            <li className="border-b-[1px] border-gray-500">Home</li>
+            <li className="border-b-[1px] border-gray-500">Faq</li>
+            <li className="border-b-[1px] border-gray-500">Help</li>
+            <li className="border-b-[1px] border-gray-500">About us</li>
           </ul>
         </div>
         <div className="HeaderRight flex items-center">
-          <ul className="flex text-red-500 p-2  ">
+          <ul className="flex text-red-500 p-2 border-2 border-gray-500 align  ">
             <UserIcon className="h-8 w-8 text-grey-500  cursor-pointer" />
             <li>Sign In</li>
           </ul>
         </div>
       </div>
     </div>
-    // <div className="flex absolute items-center flex-col w-[50%]  r-0 md:hidden">
-    //   {/* header kiri */}
-    //   <div className="HeaderLeft flex ">
-    //     <div className="MenuItem flex">
-    //       <ul className="flex flex-col text-black gap-4  md:hidden">
-    //         <li>Home</li>
-    //         <li>Faq</li>
-    //         <li>Help</li>
-    //         <li>About us</li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    //   {/* Header Kanan */}
-    //   <div className="HeaderRight flex">
-    //     <ul className="flex text-black p-2  ">
-    //       <li>Sign In</li>
-    //       <XIcon className="h-8 w-8 text-white md:hidden cursor-pointer" />
-    //     </ul>
-    //   </div>
-    // </div>
   );
 };
 
@@ -55,12 +35,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="Header bg-[#2a2a2a] w-full min-w-[680px] flex justify-between h-[4rem] items-center p-4">
+    <div className="Header bg-[#2a2a2a] max-w-full min-w-[360px] flex justify-between h-16 items-center overflow-x-auto">
       {/* header kiri */}
-      <div className="HeaderLeft flex ">
+      <div className="HeaderLeft flex pl-4 ">
         <div className="MenuItem flex">
           <img src={Logo} alt="main-logo" className="w-8 h-12 self-center" />
-          <ul className="flex text-[#ccc] gap-4 p-4 invisible md:visible">
+          <ul className="flex text-[#E7E7E7] gap-4 p-4 invisible md:visible">
             <li>Home</li>
             <li>Faq</li>
             <li>Help</li>
@@ -69,14 +49,16 @@ const Navbar = () => {
         </div>
       </div>
       {/* Header Kanan */}
-      <div className="HeaderRight flex items-center">
-        <ul className="flex text-white p-2 invisible md:visible ">
-          <UserIcon className="h-8 w-8 text-white  cursor-pointer" />
+      <div className="HeaderRight flex items-center justify-flex-end ">
+        <ul className="flex text-white p-4 invisible md:visible ">
+          <li>
+            <UserIcon className="h-6 w-6 text-white  cursor-pointer" />
+          </li>
           <li>Sign In</li>
         </ul>
 
         <MenuIcon
-          className="h-8 w-8 text-white md:hidden cursor-pointer "
+          className="h-8 w-8 text-white md:hidden cursor-pointer relative "
           onClick={() => toggle(dropSide)}
         />
         <XIcon className="h-8 w-8 text-white md:hidden cursor-pointer hidden" />
