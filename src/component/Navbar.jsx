@@ -1,6 +1,7 @@
 import Logo from "../asets/Epic.png";
 import { MenuIcon, XIcon, UserIcon } from "@heroicons/react/solid";
 import { useState } from "react";
+
 // import NavbarSM from "./SideBarDropDown";
 
 const NavbarSM = () => {
@@ -28,10 +29,10 @@ const NavbarSM = () => {
 };
 
 const Navbar = () => {
-  const [dropSide, setDropSide] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggle = (val) => {
-    setDropSide(!val);
+    setIsOpen(!val);
   };
 
   return (
@@ -59,11 +60,11 @@ const Navbar = () => {
 
         <MenuIcon
           className="h-8 w-8 text-white md:hidden cursor-pointer relative "
-          onClick={() => toggle(dropSide)}
+          onClick={() => toggle(isOpen)}
         />
         <XIcon className="h-8 w-8 text-white md:hidden cursor-pointer hidden" />
       </div>
-      {dropSide && <NavbarSM />}
+      {isOpen && <NavbarSM />}
     </div>
   );
 };

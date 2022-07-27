@@ -11,7 +11,7 @@ const App = () => {
       <Navbar />
       <SearchAndDiscover />
       {/* <NavbarSM /> */}
-      {/* <AcquireData /> */}
+      <AcquireData />
     </div>
   );
 };

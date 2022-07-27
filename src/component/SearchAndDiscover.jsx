@@ -2,7 +2,7 @@ import { SearchIcon, ChevronDownIcon } from "@heroicons/react/solid";
 
 const SearchAndDiscover = () => {
   return (
-    <div className="nav-2  bg-red-500 flex max-w-full justify-start h-16 items-center min-w-[360px] pl-10  md:pl-40 md:pr-40 gap-4 ">
+    <div className="nav-2 bg-red-500 flex max-w-full justify-start h-16 items-center min-w-[360px] pl-10  md:pl-40 md:pr-40 gap-4 ">
       <div className="flex bg-[#f5f5f5] rounded-xl">
         <SearchIcon className="w-8 h-8" />
         <input
