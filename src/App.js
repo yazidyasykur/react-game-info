@@ -8,7 +8,7 @@ import Footer from "./component/Footer"
 
 const App = () => {
   return (
-    <div className="">
+    <div className="w-full">
       <Navbar />
       <SearchAndDiscover />
       {/* <NavbarSM /> */}
