@@ -6,15 +6,23 @@ import { useState } from "react";
 
 const NavbarSM = () => {
   return (
-    <div className="flex absolute justify-end w-full h-auto md:hidden mt-16 top-0 border-t-[1px] overflow-y-hidden">
+    <div className="flex absolute justify-end w-full h-auto md:hidden mt-16 top-0 border-t-[1px] overflow-y-hidden z-10 ">
       {/* Menu when display below 720px */}
       <div className=" flex flex-col side-bar-dropdown bg-[#2a2a2a] justify-between min-w-[240px]">
         <div>
           <ul className="flex flex-col text-[#E7E7E7] justify-items-center">
-            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">Home</li>
-            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">Faq</li>
-            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">Help</li>
-            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">About us</li>
+            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">
+              Home
+            </li>
+            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">
+              Faq
+            </li>
+            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">
+              Help
+            </li>
+            <li className="border-b-[1px] p-3 border-gray-500 transition delay-75 hover:bg-[#1d1d1d]">
+              About us
+            </li>
           </ul>
         </div>
         <div className="HeaderRight flex items-center m-3 ">

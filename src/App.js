@@ -4,22 +4,22 @@ import Navbar from "./component/Navbar";
 import SearchAndDiscover from "./component/SearchAndDiscover";
 import getData from "./services/GetData";
 import AcquireData from "./component/Button";
-import Footer from "./component/Footer"
-import CardList from "./component/Carousel"
+import Footer from "./component/Footer";
+import CardList from "./component/Carousel";
+import ListGamesShow from "./component/ListGames";
+import data from "./data/data.json";
 
 const App = () => {
   return (
-    <div className="">
+    <div className="App min-w-[360px]">
       <Navbar />
-      <SearchAndDiscover />
-      <CardList />
+      {/* <SearchAndDiscover /> */}
+
+      {/* <CardList /> */}
       {/* <NavbarSM /> */}
-<<<<<<< HEAD
+      {/* <ListGamesShow /> */}
       <AcquireData />
-=======
-      {/* <AcquireData /> */}
       <Footer />
->>>>>>> e778accda5764c3bc55a14e5d03e1cf2aa1fdfa4
     </div>
   );
 };
