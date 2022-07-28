@@ -2,7 +2,6 @@ import Carousel from "react-multi-carousel";
 import { useEffect, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import { listGames } from "../services/GetData";
-import { list } from "tar";
 
 const responsive = {
     superLargeDesktop: {
@@ -43,7 +42,7 @@ function CardCarousel() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        listGames().then((data) => setData(data));
+        listGames().then((data) => setData(data.slice(0,20)));
     }, []);
 
     const list = data.map(game => <Card key={game.id} title={game.title} id={game.id}/>)
