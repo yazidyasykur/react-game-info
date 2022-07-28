@@ -8,6 +8,7 @@ import Footer from "./component/Footer";
 import CardList from "./component/Carousel";
 import ListGamesShow from "./component/ListGames";
 import data from "./data/data.json";
+import CardCarousel from "./component/Carousel";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
       {/* <CardList /> */}
       {/* <NavbarSM /> */}
       {/* <ListGamesShow /> */}
-      <AcquireData />
+      <CardCarousel />
       <Footer />
     </div>
   );

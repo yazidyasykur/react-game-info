@@ -14,7 +14,7 @@ function AcquireData({}) {
   // console.log(data.slice(2));
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto flex">
       {data.map((games) => {
         return (
           <Card key={games.id} propsGames={games}>

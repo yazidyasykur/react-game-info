@@ -127,7 +127,7 @@ export async function listGames() {
   };
   try {
     const { data } = await axios.request(options);
-    return data;
+    return data.slice(0,20);
   } catch (err) {
     return err;
   }
