@@ -14,13 +14,13 @@ const SearchAndDiscover = () => {
 
   useEffect(()=>{
     listGames().then((data) => setData(data));
-    setSearchList(data.map(item=>item.title).filter(item=>item.match(search)).slice(0,10))
+    setSearchList(data.map(item=>({title:item.title, id:item.id})).filter(item=>item.title.toLowerCase().match(search.toLowerCase())).slice(0,10))
   },[search])
 
   return (
     <div>
       <div className="nav-2 flex max-w-full justify-start h-16 items-center min-w-[360px] pl-10  md:pl-40 md:pr-40 gap-4 ">
-        <div className="flex bg-[#2a2a2a] rounded-xl px-2 py-1 items-center gap-2 ">
+        <div className="flex bg-[#090909] rounded-xl px-2 py-1 items-center gap-2 ">
           <SearchIcon className="w-5 h-5" />
           <input
             type="text"
@@ -43,7 +43,7 @@ const SearchAndDiscover = () => {
 
       </div>
       <div>
-        {(search != "") && <SearchList item={searchList} />}
+         {(search != "") && <SearchList item={searchList}/>}
       </div>
     </div>
   );
