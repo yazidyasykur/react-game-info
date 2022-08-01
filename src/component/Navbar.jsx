@@ -1,6 +1,10 @@
 import Logo from "../asets/Epic.png";
 import { MenuIcon, XIcon, UserIcon } from "@heroicons/react/solid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { signOutFromApps, auth } from "../auth/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 // import NavbarSM from "./SideBarDropDown";
 
@@ -28,7 +32,7 @@ const NavbarSM = () => {
         <div className="HeaderRight flex items-center m-3 ">
           <div className="flex text-red-500 p-2 gap-1 border-2 border-gray-500 text-sm transition delay-75 hover:bg-[#1d1d1d]">
             <UserIcon className="h-4 w-4 text-grey-500 cursor-pointer" />
-            <p>Sign In</p>
+            <Link to={"/login"}>Sign In</Link>
           </div>
         </div>
       </div>
@@ -37,6 +41,29 @@ const NavbarSM = () => {
 };
 
 const Navbar = () => {
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+      } else {
+      }
+    });
+    return unsubscribe;
+  }, []);
+
+  const [isLogin, setIsLogin] = useState();
+  // const user = auth.currentUser.email;
+
+  const navigate = useNavigate();
+
+  const buttonLogoutOnClickHandler = async () => {
+    await signOutFromApps();
+
+    navigate("/login");
+  };
+
   const [isOpen, setIsOpen] = useState(true);
 
   const toggle = (val) => {
@@ -48,22 +75,35 @@ const Navbar = () => {
       {/* header kiri */}
       <div className="HeaderLeft flex pl-4 ">
         <div className="MenuItem flex">
-          <img src={Logo} alt="main-logo" className="w-8 h-12 self-center" />
+          <Link to={"/"}>
+            <img src={Logo} alt="main-logo" className="w-8 h-12 self-center" />
+          </Link>
           <ul className="flex text-[#E7E7E7] gap-4 p-4 invisible md:visible">
-            <li>Home</li>
-            <li>Faq</li>
-            <li>Help</li>
-            <li>About us</li>
+            <Link to={"/"}>
+              <li>Home</li>
+            </Link>
+            <Link to={"/"}>
+              <li>Faq</li>
+            </Link>
+            <Link to={"/"}>
+              <li>Help</li>
+            </Link>
+            <Link to={"/"}>
+              <li>About us</li>
+            </Link>
           </ul>
         </div>
       </div>
       {/* Header Kanan */}
       <div className="HeaderRight flex items-center justify-flex-end ">
         <ul className="flex text-white p-4 invisible md:visible ">
+          <li>{user.email}</li>
           <li>
-            <UserIcon className="h-6 w-6 text-white  cursor-pointer" />
+            <UserIcon className="h-6 w-6 text-white cursor-pointer" />
           </li>
-          <li>Sign In</li>
+          {/* <button onClick={() => setIsLogin(!isLogin)}></button> */}
+
+          <button onClick={buttonLogoutOnClickHandler}>Logout</button>
         </ul>
 
         <MenuIcon
