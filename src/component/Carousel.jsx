@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
+import { useEffect, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-
+import { listGames } from "../services/GetData";
 import { useNavigate } from "react-router-dom";
 
 const responsive = {
@@ -31,11 +32,11 @@ function Card({ propsGames }) {
   };
 
   return (
-    <div className="text-white m-3">
-      <div className="flex flex-col items-center gap-2 mr-2 rounded-lg min-w-[300px] text-white">
+    <div className="text-white m-3 border-2 rounded-lg">
+      <div className="flex flex-col items-center rounded-lg  text-white">
         <img
           src={`https://www.freetogame.com/g/${propsGames.id}/thumbnail.jpg`}
-          className="max-h-[300px] object-fill p-2 rounded-lg cursor-pointer"
+          className="max-h-[300px] object-fill p-2 rounded-xl cursor-pointer hover:brightness-75"
           onClick={() => {
             openDetail(propsGames);
           }}
@@ -46,26 +47,13 @@ function Card({ propsGames }) {
   );
 }
 
-<<<<<<< HEAD
 function CardCarousel() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    let isMounted = true;
-
-    if (isMounted) {
-      listGames().then((data) => setData(data.slice(0, 20)));
-    }
-    return () => {
-      // 👇️ when component unmounts, set isMounted to false
-      isMounted = false;
-    };
+    listGames().then((data) => setData(data.slice(0, 20)));
   }, []);
-=======
-function CardCarousel(props) {
->>>>>>> 86afbae2ee816ecda863a4b6f28b837e16a61365
 
-  const data = props.data.slice(0,30)
   const list = data.map((game) => (
     <div key={game.id}>
       <Card title={game.title} id={game.id} propsGames={game} />
@@ -73,7 +61,7 @@ function CardCarousel(props) {
   ));
 
   return (
-    <div className="pl-20 pr-20 text-white">
+    <div className="px-20 text-white ">
       <Carousel responsive={responsive}>{list}</Carousel>
     </div>
   );

@@ -38,7 +38,7 @@ const SearchAndDiscover = () => {
     <div>
       <div className="nav-2 flex max-w-full justify-start h-16 items-center min-w-[360px] pl-10  md:pl-40 md:pr-40 gap-4 ">
         <div className="flex bg-[#090909] rounded-xl px-2 py-1 items-center gap-2 ">
-          <SearchIcon className="w-5 h-5" />
+          <SearchIcon className="w-5 h-5 text-white" />
           <input
             type="text"
             name=""

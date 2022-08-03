@@ -10,7 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 const NavbarSM = () => {
   return (
-    <div className="flex absolute justify-end w-full h-auto md:hidden mt-16 top-0 border-t-[1px] overflow-y-hidden z-10 ">
+    <div className="flex absolute justify-end w-full h-screen md:hidden mt-16 top-0 border-t-[1px] overflow-y-hidden z-10">
       {/* Menu when display below 720px */}
       <div className=" flex flex-col side-bar-dropdown bg-[#2a2a2a] justify-between min-w-[240px]">
         <div>
@@ -71,25 +71,25 @@ const Navbar = () => {
   };
 
   return (
-    <div className="Header bg-[#2a2a2a] pr-3 max-w-full min-w-[360px] flex justify-between h-16 items-center overflow-x-auto">
+    <div className="Header bg-[#2a2a2a] pr-3 max-w-full min-w-[360px] flex justify-between h-16 items-center overflow-x-auto ">
       {/* header kiri */}
       <div className="HeaderLeft flex pl-4 ">
         <div className="MenuItem flex">
           <Link to={"/"}>
             <img src={Logo} alt="main-logo" className="w-8 h-12 self-center" />
           </Link>
-          <ul className="flex text-[#E7E7E7] gap-4 p-4 invisible md:visible">
+          <ul className="flex text-[#E7E7E7] gap-4 p-4 invisible md:visible ">
             <Link to={"/"}>
-              <li>Home</li>
+              <li className="hover:brightness-75">Home</li>
             </Link>
             <Link to={"/"}>
-              <li>Faq</li>
+              <li className="hover:brightness-75">Faq</li>
             </Link>
             <Link to={"/"}>
-              <li>Help</li>
+              <li className="hover:brightness-75">Help</li>
             </Link>
             <Link to={"/"}>
-              <li>About us</li>
+              <li className="hover:brightness-75">About us</li>
             </Link>
           </ul>
         </div>

@@ -1,10 +1,12 @@
 import axios from "axios";
 
-export function randomize(data, size){
+export function randomize(data, size) {
   let dataLength = data.length;
+
   let randomData = [];
-  for(let i=0;i<size;i++){
-    randomData.push(data[Math.floor(Math.random()*dataLength)])
+
+  for (let i = 0; i < size; i++) {
+    randomData.push(data[Math.floor(Math.random() * dataLength)]);
   }
   return randomData;
 }
@@ -38,7 +40,7 @@ export async function byCategory(params_category) {
     },
   };
   try {
-    const {data} = await axios.request(options);
+    const { data } = await axios.request(options);
     return data;
   } catch (err) {
     return err;
