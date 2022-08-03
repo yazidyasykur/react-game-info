@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { gameDetails } from "../services/GetData";
 import ByCategoryList from "./ByCategory";
 
@@ -8,7 +8,7 @@ const DetailGame = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    gameDetails(id).then(data => setData(data));
+    gameDetails(id).then((data) => setData(data));
   }, []);
 
   return (
@@ -32,7 +32,8 @@ const DetailGame = () => {
           </ul>
         </div>
       </div>
-        <ByCategoryList category={data.genre} />
+      <h1 className="ml-20 mr-20">Game with Same Genre</h1>
+      <ByCategoryList category={data.genre} propsData={data} />
     </div>
   );
 };

@@ -13,13 +13,25 @@ const SearchAndDiscover = () => {
   }
 
   useEffect(() => {
-    listGames().then((data) => setData(data));
-    setSearchList(
-      data
-        .map((item) => ({ title: item.title, id: item.id }))
-        .filter((item) => item.title.toLowerCase().match(search.toLowerCase()))
-        .slice(0, 10)
-    );
+    let unmounted = false;
+
+    listGames().then((data) => {
+      if (!unmounted) {
+        setData(data);
+        setSearchList(
+          data
+            .map((item) => ({ title: item.title, id: item.id }))
+            .filter((item) =>
+              item.title.toLowerCase().match(search.toLowerCase())
+            )
+            .slice(0, 10)
+        );
+      }
+    });
+
+    return () => {
+      unmounted = true;
+    };
   }, [data, search]);
 
   return (

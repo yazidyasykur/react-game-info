@@ -51,7 +51,15 @@ function CardCarousel() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    listGames().then((data) => setData(data.slice(0, 20)));
+    let isMounted = true;
+
+    if (isMounted) {
+      listGames().then((data) => setData(data.slice(0, 20)));
+    }
+    return () => {
+      // 👇️ when component unmounts, set isMounted to false
+      isMounted = false;
+    };
   }, []);
 
   const list = data.map((game) => (
