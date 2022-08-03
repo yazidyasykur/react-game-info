@@ -32,8 +32,12 @@ const DetailGame = () => {
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
       <h1 className="ml-20 mr-20">Game with Same Genre</h1>
       <ByCategoryList category={data.genre} propsData={data} />
+=======
+        <ByCategoryList data={data} />
+>>>>>>> 86afbae2ee816ecda863a4b6f28b837e16a61365
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import Carousel from "react-multi-carousel";
-import { useEffect, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import { listGames } from "../services/GetData";
+
 import { useNavigate } from "react-router-dom";
 
 const responsive = {
@@ -47,6 +46,7 @@ function Card({ propsGames }) {
   );
 }
 
+<<<<<<< HEAD
 function CardCarousel() {
   const [data, setData] = useState([]);
 
@@ -61,7 +61,11 @@ function CardCarousel() {
       isMounted = false;
     };
   }, []);
+=======
+function CardCarousel(props) {
+>>>>>>> 86afbae2ee816ecda863a4b6f28b837e16a61365
 
+  const data = props.data.slice(0,30)
   const list = data.map((game) => (
     <div key={game.id}>
       <Card title={game.title} id={game.id} propsGames={game} />
