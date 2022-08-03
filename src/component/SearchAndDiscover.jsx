@@ -1,21 +1,26 @@
 import { SearchIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import SearchList from "./SearchList";
 import { useEffect, useState } from "react";
-import {listGames} from "../services/GetData"
+import { listGames } from "../services/GetData";
 
 const SearchAndDiscover = () => {
-  const [search, setSearch] = useState("")
-  const [searchList, setSearchList] = useState([])
-  const [data, setData] = useState([])
- 
+  const [search, setSearch] = useState("");
+  const [searchList, setSearchList] = useState([]);
+  const [data, setData] = useState([]);
+
   function searchSetter(value) {
-    setSearch(value)
+    setSearch(value);
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     listGames().then((data) => setData(data));
-    setSearchList(data.map(item=>({title:item.title, id:item.id})).filter(item=>item.title.toLowerCase().match(search.toLowerCase())).slice(0,10))
-  },[search])
+    setSearchList(
+      data
+        .map((item) => ({ title: item.title, id: item.id }))
+        .filter((item) => item.title.toLowerCase().match(search.toLowerCase()))
+        .slice(0, 10)
+    );
+  }, [data, search]);
 
   return (
     <div>
@@ -40,11 +45,8 @@ const SearchAndDiscover = () => {
             <li>News</li>
           </div>
         </ul>
-
       </div>
-      <div>
-         {(search != "") && <SearchList item={searchList}/>}
-      </div>
+      <div>{search !== "" && <SearchList item={searchList} />}</div>
     </div>
   );
 };
