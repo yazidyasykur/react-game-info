@@ -24,7 +24,7 @@ function CategoryItems(props) {
   );
 }
 
-const ByCategoryList = (props) => {
+const ByCategoryList = () => {
   const [listCategory, setListCategory] = useState([]);
 
   useEffect(() => {

@@ -38,7 +38,7 @@ const DetailGame = () => {
           </div>
         </div>
         <h1 className="ml-20 mr-20">You Might like</h1>
-        <ByCategoryList category={data.genre} propsData={data} />
+        <ByCategoryList />
       </div>
       <Footer />
     </div>

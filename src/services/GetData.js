@@ -2,11 +2,13 @@ import axios from "axios";
 
 export function randomize(data, size) {
   let dataLength = data.length;
-
   let randomData = [];
+  let arr = data.slice()
 
   for (let i = 0; i < size; i++) {
-    randomData.push(data[Math.floor(Math.random() * dataLength)]);
+    let randomIndex = Math.floor(Math.random() * dataLength)
+    randomData.push(arr[randomIndex]);
+    arr.splice(randomIndex,1)
   }
   return randomData;
 }
