@@ -32,7 +32,7 @@ const DetailGame = () => {
           </ul>
         </div>
       </div>
-        <ByCategoryList category={data.genre} />
+        <ByCategoryList data={data} />
     </div>
   );
 };
